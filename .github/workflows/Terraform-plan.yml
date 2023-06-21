@@ -1,7 +1,13 @@
 name: Terraform Plan
 
 on:
-  #workflow_dispatch:
+  push:
+    branches: none
+    #paths: .github/workflows/1-actions-ci-cd-aks.yml
+  pull_request:
+    branches:  none # [ main ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
   
 env:
   WORKING_DIR: 'example'
