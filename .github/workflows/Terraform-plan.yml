@@ -17,6 +17,10 @@ jobs:
     name: Terraform Plan
     runs-on: [unbuntu-latest]
     container:
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./${{ env.WORKING_DIR }}
     
 
 
