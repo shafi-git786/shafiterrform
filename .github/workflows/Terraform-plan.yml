@@ -1,7 +1,7 @@
 name: Terraform Plan
 
 on:
-  workflow_dispatch:
+  #workflow_dispatch:
   
 env:
   WORKING_DIR: 'example'
