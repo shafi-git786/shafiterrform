@@ -1,7 +1,7 @@
 name: Terraform Plan
 
-# on:
-#   workflow_dispatch:
+on:
+  workflow_dispatch:
   
 env:
   WORKING_DIR: 'example'
@@ -16,11 +16,28 @@ jobs:
   terraform_plan:
     name: Terraform Plan
     runs-on: [unbuntu-latest]
-    container:
+    #container:
     defaults:
       run:
         shell: bash
         working-directory: ./${{ env.WORKING_DIR }}
-    
+        
+    steps:    
+      - name: checkout
+        uses: actions/checkout@v2
+        
+      - name: Set Env
+        run: |
+          echo: "PLAN_FILE=${GITHUB_REF##*/}-dev.tfplan" >> $GITHUB_ENV
+          echo: "STATE_FILE=${GITHUB_REF##*/}.terraform.tfstate" >> GITHUB_ENV
+           
+      - name: login
+        uses: azure/login@v2
+        with:
+          creds: ${{secrets.AZURE_CREDENTIALS}}
+          
+      - name: terraform init
+        run: terraform init -backend-config=key=${env.STATE_FILE} -input=false 
+          
 
 
