@@ -12,6 +12,7 @@ env:
   TF_VERSION: 1.4.6
   #VARS_FILE: dev.tfvars
   
+  
 jobs:  
   terraform_plan:
     name: Terraform Plan
@@ -41,8 +42,15 @@ jobs:
         id: fmt
         run: terraform fmt -recursive    
           
-      - name: terraform init
-        run: terraform init -backend-config=key=${env.STATE_FILE} -input=false 
+#       - name: terraform init
+#         run: terraform init -backend-config=key=${env.STATE_FILE} -input=false 
+        
+      - name: 'Terraform Init'
+        uses: hashicorp/terraform-github-actions@master
+        with:
+          tf_actions_version: 0.14.8
+          tf_actions_subcommand: 'init'
+          tf_actions_working_dir: "./terraform"  
           
 
 
