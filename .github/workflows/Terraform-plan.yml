@@ -10,12 +10,12 @@ env:
   ARM_SUBSCRIPTION_ID : ${{ secrets.AZURE_SUBSCRIPTION_ID }}
   ARM_TENANT_ID : ${{ secrets.AZURE_TENANT_ID }}
   TF_VERSION: 1.4.6
-  VARS_FILE: dev.tfvars
+  #VARS_FILE: dev.tfvars
   
 jobs:  
   terraform_plan:
     name: Terraform Plan
-    runs-on: [unbuntu-latest]
+    runs-on: ubuntu-latest
     #container:
     defaults:
       run:
