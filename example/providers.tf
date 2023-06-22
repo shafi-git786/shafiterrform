@@ -19,7 +19,7 @@ terraform {
     resource_group_name  = "tamopstfstates"
     storage_account_name = "tamopstfsha"
     container_name       = "tfstatedevops"
-    #key                  = "terraformgithubexample.tfstate"
+    key                  = "terraformgithubexample.tfstate"
     subscription_id       = "d4281e96-cd35-4be0-b807-b446ba406ea8"
     tenant_id             = "ae229306-f857-4091-a542-342fbe575384"
   }
