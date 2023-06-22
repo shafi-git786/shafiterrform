@@ -32,7 +32,7 @@ jobs:
           echo: "STATE_FILE=${GITHUB_REF##*/}.terraform.tfstate" >> GITHUB_ENV
            
       - name: login
-        uses: azure/login@v2
+        uses: azure/login@v1
         with:
           creds: ${{secrets.AZURE_CREDENTIALS}}
           
