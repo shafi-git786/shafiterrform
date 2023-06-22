@@ -26,10 +26,10 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
         
-      - name: Set Env
-        run: |
-          echo: "PLAN_FILE=${GITHUB_REF##*/}-dev.tfplan" >> $GITHUB_ENV
-          echo: "STATE_FILE=${GITHUB_REF##*/}.terraform.tfstate" >> GITHUB_ENV
+#       - name: Set Env
+#         run: |
+#           echo: "PLAN_FILE=${GITHUB_REF##*/}-dev.tfplan" >> $GITHUB_ENV
+#           echo: "STATE_FILE=${GITHUB_REF##*/}.terraform.tfstate" >> GITHUB_ENV
            
       - name: login
         uses: azure/login@v1
