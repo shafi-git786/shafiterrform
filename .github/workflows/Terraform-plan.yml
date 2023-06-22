@@ -36,6 +36,11 @@ jobs:
         with:
           creds: ${{secrets.AZURE_CREDENTIALS}}
           
+           
+      - name: terraform format
+        id: fmt
+        run: terraform fmt -recursive    
+          
       - name: terraform init
         run: terraform init -backend-config=key=${env.STATE_FILE} -input=false 
           
