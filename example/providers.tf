@@ -14,7 +14,6 @@ provider "azurerm" {
 
 data "azurerm_client_config" "current" {}
 
-/*
 terraform {
   backend "azurerm" {
     resource_group_name  = "tamopstfstates"
@@ -25,4 +24,3 @@ terraform {
     tenant_id             = "ae229306-f857-4091-a542-342fbe575384"
   }
 }
- */
