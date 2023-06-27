@@ -56,6 +56,12 @@ jobs:
           tf_actions_version: 0.14.8
           tf_actions_subcommand: 'init'
           tf_actions_working_dir: "example"  
+         
+      - name: Run Azure PowerShell script
+        uses: azure/powershell@v1
+        with:
+          inlineScript: |
+            Get-AzContext   
           
       - name: 'Terraform Validate'
         uses: hashicorp/terraform-github-actions@master
