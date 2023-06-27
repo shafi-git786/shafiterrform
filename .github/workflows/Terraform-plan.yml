@@ -62,6 +62,7 @@ jobs:
         with:
           inlineScript: |
             Get-AzContext   
+          azPSVersion: "latest"  
           
       - name: 'Terraform Validate'
         uses: hashicorp/terraform-github-actions@master
