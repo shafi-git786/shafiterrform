@@ -16,7 +16,7 @@ data "azurerm_client_config" "current" {}
 
 terraform {
   backend "azurerm" {
-    resource_group_name  = "shaf-rg"
+    resource_group_name  = "shafi-rg"
     storage_account_name = "shafistg12"
     container_name       = "shafistg12cont"
     key                  = "terraformgithubexample.tfstate"
