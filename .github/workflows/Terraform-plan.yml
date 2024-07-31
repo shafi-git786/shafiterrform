@@ -83,7 +83,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: hashicorp/terraform-github-actions@master
         with:
-          #creds: ${{secrets.AZURE_CREDENTIALS}}
+          creds: ${{secrets.AZURE_CREDENTIALS}}
           tf_actions_version: 0.14.8
           tf_actions_subcommand: 'apply'
           tf_actions_working_dir: "example"    
