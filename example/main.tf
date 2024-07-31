@@ -8,7 +8,7 @@ resource "azurerm_storage_account" "shastg1" {
   resource_group_name      = azurerm_resource_group.sharg.name
   location                 = azurerm_resource_group.sharg.location
   account_tier             = "Standard"
-  account_replication_type = "GRS"
+  account_replication_type = "LRS"
 
   tags = {
     environment = "staging"
@@ -38,7 +38,7 @@ locals {
 }
 
 resource "azurerm_mssql_server" "server" {
-  name                         = "msqlserver"
+  name                         = "msqlserver1"
   resource_group_name          = azurerm_resource_group.sharg.name
   location                     = azurerm_resource_group.sharg.location
   administrator_login          = var.admin_username
