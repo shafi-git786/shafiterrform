@@ -1,4 +1,4 @@
-4resource "azurerm_resource_group" "sharg" {
+resource "azurerm_resource_group" "sharg" {
   name     = "shafi-githubrg"
   location = "WEST US"
 }
@@ -38,7 +38,7 @@ locals {
 }
 
 resource "azurerm_mssql_server" "server" {
-  name                         = random_pet.azurerm_mssql_server_name.id
+  name                         = srvredbcreat410448444ui
   resource_group_name          = azurerm_resource_group.sharg.name
   location                     = azurerm_resource_group.sharg.location
   administrator_login          = var.admin_username
