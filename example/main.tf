@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "sharg" {
   name     = "shafi-githubrg"
-  location = "East US"
+  location = "WEST US"
 }
 
 resource "azurerm_storage_account" "shastg1" {
