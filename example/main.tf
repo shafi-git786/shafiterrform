@@ -1,10 +1,10 @@
-resource "azurerm_resource_group" "sharg" {
+4resource "azurerm_resource_group" "sharg" {
   name     = "shafi-githubrg"
   location = "WEST US"
 }
 
 resource "azurerm_storage_account" "shastg1" {
-  name                     = "storagenewshaiks"
+  name                     = "storagenewshaiks14194"
   resource_group_name      = azurerm_resource_group.sharg.name
   location                 = azurerm_resource_group.sharg.location
   account_tier             = "Standard"
