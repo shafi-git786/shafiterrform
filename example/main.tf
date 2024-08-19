@@ -38,7 +38,7 @@ locals {
 }
 
 resource "azurerm_mssql_server" "server" {
-  name                         = "mysqlserver1"
+  name                         = "mysqlsrvrsqldb"
   resource_group_name          = azurerm_resource_group.sharg.name
   location                     = azurerm_resource_group.sharg.location
   administrator_login          = var.admin_username
