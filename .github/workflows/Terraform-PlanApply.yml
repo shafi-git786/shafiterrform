@@ -45,14 +45,14 @@ jobs:
             enable-AzPSSession: true
 
 
-      - name: Azure CLI script
-        uses: azure/CLI@v1
-        with:
-          azcliversion: latest
-          inlineScript: |
-            az account show
-            az account set --sub '1ee7d876-0c53-43e7-a87f-11e11a8122cf'
-            az resource delete --ids '/subscriptions/1ee7d876-0c53-43e7-a87f-11e11a8122cf/resourceGroups/shafi-githubrg/providers/Microsoft.Storage/storageAccounts/storagenewshaikssss19'
+      # - name: Azure CLI script
+      #   uses: azure/CLI@v1
+      #   with:
+      #     azcliversion: latest
+      #     inlineScript: |
+      #       az account show
+      #       az account set --sub '1ee7d876-0c53-43e7-a87f-11e11a8122cf'
+      #       az resource delete --ids '/subscriptions/1ee7d876-0c53-43e7-a87f-11e11a8122cf/resourceGroups/shafi-githubrg/providers/Microsoft.Storage/storageAccounts/storagenewshaikssss19'
       
 
       - name: Setup Terraform
