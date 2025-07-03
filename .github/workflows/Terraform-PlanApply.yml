@@ -14,7 +14,7 @@ env:
   
   
 jobs:  
-  terraform_plan:
+  terraform_plan_apply:
     name: Terraform Plan
     runs-on: ubuntu-latest
     #container:

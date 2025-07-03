@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=3.0.0"
+      version = "=4.35.0"
     }
   }
 }
@@ -20,7 +20,7 @@ terraform {
     storage_account_name = "sqldbstrntaccount12"
     container_name       = "mynewcon"
     key                  = "terraformgithubexample.tfstate"
-    subscription_id       = "fddd3813-63cd-41f4-bd6f-2d7499906fa7"
-    tenant_id             = "d3cbd746-7207-498c-840a-4c8d8d5879d4"
+    subscription_id       = "1ee7d876-0c53-43e7-a87f-11e11a8122cf"
+    tenant_id             = "ab3f3475-1f43-4893-a4b3-6a5735e72bba"
   }
 }
