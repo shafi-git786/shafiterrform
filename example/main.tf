@@ -13,7 +13,7 @@ resource "azurerm_resource_group" "sharg" {
 #   tags = {
 #     environment = "staging"
 #   }
-# }
+# }}
 
 resource "random_pet" "azurerm_mssql_server_name" {
   prefix = "sql"
