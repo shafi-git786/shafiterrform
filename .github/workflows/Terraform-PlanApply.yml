@@ -20,6 +20,7 @@ env:
   ARM_TENANT_ID : ${{ secrets.AZURE_TENANT_ID }}
   TF_VERSION: 1.4.6
   #VARS_FILE: dev.tfvars
+  #
   
   
 jobs:  
