@@ -2,6 +2,10 @@ name: Terraform Plan and Apply
 
 on:
   workflow_dispatch:
+
+  push:
+     branches:
+       - 'main'
   
 env:
   WORKING_DIR: 'example'
